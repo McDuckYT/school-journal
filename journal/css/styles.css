@@ -1,0 +1,107 @@
+body {
+    padding-bottom: 60px;
+    background-color: #333;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #444;
+    border: 1px solid #fff;
+    border-radius: 8px; /* Скругляем углы таблицы */
+    color: #fff;
+}
+
+table th,
+table td {
+    border: 1px solid #fff;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #666;
+}
+
+.fixed-column {
+    position: sticky;
+    left: 0;
+    background-color: #666;
+    z-index: 1;
+}
+
+.white-row {
+    background-color: #555;
+}
+
+.grey-row {
+    background-color: #444;
+}
+
+.grade-cell {
+    padding: 0; /* Убираем отступы в ячейке с оценкой */
+}
+
+input[type="number"] {
+    width: 100%; /* Заполняем всю ширину ячейки */
+    height: 40px;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    border: none; /* Убираем рамку у поля ввода */
+    border-radius: 0; /* Убираем скругление углов у поля ввода */
+    color: #fff;
+    background-color: transparent; /* Прозрачный фон для поля ввода */
+    font-size: inherit;
+}
+
+/* Стили для зеленых оценок */
+.green-grade {
+    background-color: #4CAF50; /* Зеленый цвет для оценок 4 и 5 */
+}
+
+.lime-grade {
+    background-color: #32CD32; /* Зеленый цвет для оценок 4 и 5 */
+}
+
+
+/* Стили для оранжевых оценок */
+.orange-grade {
+    background-color: #FFA500; /* Оранжевый цвет для оценки 3 */
+}
+
+/* Стили для красных оценок */
+.red-grade {
+    background-color: #FF0000; /* Красный цвет для оценки 2 */
+}
+
+button[type="submit"] {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    border-radius: 20px;
+}
+
+/* Media query для более узких экранов */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+    input[type="number"] {
+        height: 30px;
+    }
+    button[type="submit"] {
+        padding: 10px 20px;
+    }
+}
